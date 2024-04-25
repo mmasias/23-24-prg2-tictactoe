@@ -36,8 +36,7 @@ public class Tablero {
                     columnas[j]++;
                     diagonal = diagonal + ((i == j) ? 1 : 0);
                     inversa = inversa + ((i + j == 2) ? 1 : 0);
-
-                    if (filas[i]==3||columnas[j]==3||diagonal==3||inversa==3){
+                    if (filas[i] == 3 || columnas[j] == 3 || diagonal == 3 || inversa == 3) {
                         return true;
                     }
 
@@ -49,15 +48,14 @@ public class Tablero {
 
     public boolean estaCompleto(Jugador jugador) {
         char ficha = jugador.ficha();
-        int conteoFichas=0;
-        for (int i=0;i<casillas.length;i++){
-            for(int j=0;j<casillas[i].length;j++){
-                if(casillas[i][j]==ficha){
+        int conteoFichas = 0;
+        for (int i = 0; i < casillas.length; i++) {
+            for (int j = 0; j < casillas[i].length; j++) {
+                if (casillas[i][j] == ficha) {
                     conteoFichas++;
                 }
             }
         }
-        return conteoFichas==3;
+        return conteoFichas == 3;
     }
-
 }

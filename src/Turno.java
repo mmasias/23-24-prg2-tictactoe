@@ -2,8 +2,8 @@ public class Turno {
 
     private int valor;
 
-    public Turno(){
-        valor = (int)(Math.random()*2);
+    public Turno() {
+        valor = (int) (Math.random() * 2);
     }
 
     public int toca() {
@@ -11,7 +11,7 @@ public class Turno {
     }
 
     public int noToca() {
-        return (valor+1)%2;
+        return (valor + 1) % 2;
     }
 
     public void cambiar() {
