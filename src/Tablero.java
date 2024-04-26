@@ -58,4 +58,16 @@ public class Tablero {
         }
         return conteoFichas == 3;
     }
+
+    public boolean ocupado(Coordenada coordenada) {
+        return casillas[coordenada.getFila()-1][coordenada.getColumna()-1] != '-';        
+    }
+
+    public void ponerFicha(Coordenada coordenada, char ficha) {
+        casillas[coordenada.getFila()-1][coordenada.getColumna()-1] = ficha;  
+    }
+
+    public void sacarFicha(Coordenada coordenada) {
+        casillas[coordenada.getFila()-1][coordenada.getColumna()-1] = '-';  
+    }
 }
